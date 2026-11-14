@@ -872,6 +872,8 @@
 
     .badge-row {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
       align-items: center;
       gap: 6px;
       flex-shrink: 0;
@@ -900,6 +902,28 @@
       background: rgba(165, 209, 243, 0.36);
       border-color: rgba(255, 255, 255, 0.82);
       color: #1f64a6;
+    }
+
+    .card.is-pinned {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(250, 210, 224, 0.42) 50%, rgba(165, 209, 243, 0.44) 100%);
+      box-shadow:
+        inset 0 2px 1px 0 rgba(255, 255, 255, 0.96),
+        inset 0 18px 34px -12px rgba(255, 255, 255, 0.74),
+        inset 0 -16px 30px -12px rgba(217, 91, 136, 0.2),
+        0 22px 44px -14px rgba(180, 88, 128, 0.2),
+        0 6px 16px -4px rgba(58, 98, 135, 0.12);
+    }
+
+    .pin-badge {
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, rgba(250, 210, 224, 0.78) 0%, rgba(255, 240, 194, 0.78) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      color: #a6335e;
+      white-space: nowrap;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 2px 8px -2px rgba(217, 91, 136, 0.25);
     }
 
 
@@ -1123,6 +1147,7 @@
       </div>
       <div class="filter-pills" role="tablist" aria-label="Category filters">
         <button type="button" class="filter-pill active" data-filter="all">全部 (25)</button>
+        <button type="button" class="filter-pill" data-filter="pinned" id="pinnedFilterPill">📌 置顶精选 (6)</button>
         <button type="button" class="filter-pill" data-filter="web">🌐 在线 Web 工具 (7)</button>
         <button type="button" class="filter-pill" data-filter="media">🎬 影像与桌面工具 (6)</button>
         <button type="button" class="filter-pill" data-filter="hardware">🔧 硬件与 Linux 移植 (9)</button>
@@ -1137,12 +1162,53 @@
       </div>
 
       <div class="grid" id="projectGrid">
-        <!-- ==================== 1. 在线 Web 工具 / Live Web Apps (7) ==================== -->
-        <article class="card" data-category="web">
+        <article class="card is-pinned" data-category="media" data-repo="Bluetooth-Music-Canvas" data-default-order="8" data-pinned="true">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/Bluetooth-Music-Canvas" target="_blank" rel="noopener noreferrer">Bluetooth-Music-Canvas</a></h3>
+              <div class="badge-row">
+                <span class="pin-badge" title="GitHub Pinned Repository · GitHub 置顶项目">📌 置顶</span>
+                <span class="cat-badge">Android TV</span>
+                <span class="lang-badge">Java</span>
+              </div>
+            </div>
+            <p class="card-desc">极简高颜值 Android 蓝牙音频大屏看板 &amp; 桌面黑胶悬浮球（支持电视/车机、毛玻璃唱针循迹、5频段频谱律动与流光歌词）| Android TV &amp; Car Vinyl Bluetooth Music Visualizer.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">android-tv</span><span class="topic">bluetooth-audio</span><span class="topic">vinyl</span><span class="topic">music-visualizer</span><span class="topic">glassmorphism</span><span class="topic">car-infotainment</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/Bluetooth-Music-Canvas" target="_blank" rel="noopener noreferrer">GitHub 源码 / APK ↗</a>
+          </div>
+        </article>
+
+        <article class="card is-pinned" data-category="web" data-repo="neon-noise" data-default-order="4" data-pinned="true">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://arrow36.github.io/neon-noise/" target="_blank" rel="noopener noreferrer">neon-noise</a></h3>
+              <div class="badge-row">
+                <span class="pin-badge" title="GitHub Pinned Repository · GitHub 置顶项目">📌 置顶</span>
+                <span class="cat-badge is-live">Live Web</span>
+                <span class="lang-badge">HTML</span>
+              </div>
+            </div>
+            <p class="card-desc">Real-time Web Audio Noise Spectrum Analyzer with 20s Waterfall History | 实时网页噪音频谱分析仪，支持分析最近 20 秒的频谱变化与瀑布图。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">spectrum-analyzer</span><span class="topic">audio-visualizer</span><span class="topic">web-audio-api</span><span class="topic">noise-meter</span><span class="topic">fft</span><span class="topic">spectrogram</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-primary" href="https://arrow36.github.io/neon-noise/" target="_blank" rel="noopener noreferrer">🚀 在线体验 / Launch</a>
+            <a class="btn-secondary" href="https://github.com/Arrow36/neon-noise" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
+          </div>
+        </article>
+
+        <article class="card is-pinned" data-category="web" data-repo="filmnet-realgrain-web" data-default-order="0" data-pinned="true">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://arrow36.github.io/filmnet-realgrain-web/" target="_blank" rel="noopener noreferrer">filmnet-realgrain-web</a></h3>
               <div class="badge-row">
+                <span class="pin-badge" title="GitHub Pinned Repository · GitHub 置顶项目">📌 置顶</span>
                 <span class="cat-badge is-live">Live Web</span>
                 <span class="lang-badge">TypeScript</span>
               </div>
@@ -1158,7 +1224,67 @@
           </div>
         </article>
 
-        <article class="card" data-category="web">
+        <article class="card is-pinned" data-category="hardware" data-repo="kindle4-flip-clock" data-default-order="17" data-pinned="true">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/kindle4-flip-clock" target="_blank" rel="noopener noreferrer">kindle4-flip-clock</a></h3>
+              <div class="badge-row">
+                <span class="pin-badge" title="GitHub Pinned Repository · GitHub 置顶项目">📌 置顶</span>
+                <span class="cat-badge">E-Ink</span>
+                <span class="lang-badge">Shell</span>
+              </div>
+            </div>
+            <p class="card-desc">Full-screen Flip-Clock KUAL Extension for Kindle 4 Non-Touch (K4NT) | Kindle 4 全屏电子墨水翻页时钟 KUAL 插件。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">kindle</span><span class="topic">kindle4</span><span class="topic">k4nt</span><span class="topic">kual</span><span class="topic">flip-clock</span><span class="topic">e-ink</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/kindle4-flip-clock" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card is-pinned" data-category="media" data-repo="RAWBurst2DNG" data-default-order="7" data-pinned="true">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/RAWBurst2DNG" target="_blank" rel="noopener noreferrer">RAWBurst2DNG</a></h3>
+              <div class="badge-row">
+                <span class="pin-badge" title="GitHub Pinned Repository · GitHub 置顶项目">📌 置顶</span>
+                <span class="cat-badge">Media</span>
+                <span class="lang-badge">Python</span>
+              </div>
+            </div>
+            <p class="card-desc">Canon RAW Burst CR3 extractor and DNG 1.4/CinemaDNG sequence converter for DaVinci Resolve | 佳能 RAW 连拍 CR3 提取与 DNG 序列转换工具。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">canon</span><span class="topic">cr3</span><span class="topic">raw-burst</span><span class="topic">cinemadng</span><span class="topic">davinci-resolve</span><span class="topic">dng</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/RAWBurst2DNG" target="_blank" rel="noopener noreferrer">GitHub 源码 / Releases ↗</a>
+          </div>
+        </article>
+
+        <article class="card is-pinned" data-category="nlp" data-repo="Hangul-Hanja-mixed-script" data-default-order="22" data-pinned="true">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/Hangul-Hanja-mixed-script" target="_blank" rel="noopener noreferrer">Hangul-Hanja-mixed-script</a></h3>
+              <div class="badge-row">
+                <span class="pin-badge" title="GitHub Pinned Repository · GitHub 置顶项目">📌 置顶</span>
+                <span class="cat-badge">Korean NLP</span>
+                <span class="lang-badge">Python</span>
+              </div>
+            </div>
+            <p class="card-desc">Hangul → Hanja mixed-script converter · 국한문혼용 변환기 · 韩文→汉谚混写转换器 | Dictionary, etymology &amp; homonym selection.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">hangul</span><span class="topic">hanja</span><span class="topic">gukhanmun</span><span class="topic">korean-nlp</span><span class="topic">mixed-script</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/Hangul-Hanja-mixed-script" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web" data-repo="SewShot" data-default-order="1">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://arrow36.github.io/SewShot/" target="_blank" rel="noopener noreferrer">SewShot</a></h3>
@@ -1178,7 +1304,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="web">
+        <article class="card" data-category="web" data-repo="qr-code-xp" data-default-order="2">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://arrow36.github.io/qr-code-xp/" target="_blank" rel="noopener noreferrer">qr-code-xp</a></h3>
@@ -1198,7 +1324,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="web">
+        <article class="card" data-category="web" data-repo="smart-cash-change" data-default-order="3">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://arrow36.github.io/smart-cash-change/" target="_blank" rel="noopener noreferrer">smart-cash-change</a></h3>
@@ -1218,27 +1344,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="web">
-          <div>
-            <div class="card-top">
-              <h3 class="card-title"><a href="https://arrow36.github.io/neon-noise/" target="_blank" rel="noopener noreferrer">neon-noise</a></h3>
-              <div class="badge-row">
-                <span class="cat-badge is-live">Live Web</span>
-                <span class="lang-badge">HTML</span>
-              </div>
-            </div>
-            <p class="card-desc">Real-time Web Audio Noise Spectrum Analyzer with 20s Waterfall History | 实时网页噪音频谱分析仪，支持分析最近 20 秒的频谱变化与瀑布图。</p>
-          </div>
-          <div class="topics">
-            <span class="topic">spectrum-analyzer</span><span class="topic">audio-visualizer</span><span class="topic">web-audio-api</span><span class="topic">noise-meter</span><span class="topic">fft</span><span class="topic">spectrogram</span>
-          </div>
-          <div class="card-actions">
-            <a class="btn-primary" href="https://arrow36.github.io/neon-noise/" target="_blank" rel="noopener noreferrer">🚀 在线体验 / Launch</a>
-            <a class="btn-secondary" href="https://github.com/Arrow36/neon-noise" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="web">
+        <article class="card" data-category="web" data-repo="bushibushi-suzhou" data-default-order="5">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://arrow36.github.io/bushibushi-suzhou/" target="_blank" rel="noopener noreferrer">bushibushi-suzhou</a></h3>
@@ -1258,7 +1364,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="web">
+        <article class="card" data-category="web" data-repo="qingxu-atlas" data-default-order="6">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://arrow36.github.io/qingxu-atlas/" target="_blank" rel="noopener noreferrer">qingxu-atlas</a></h3>
@@ -1278,46 +1384,7 @@
           </div>
         </article>
 
-        <!-- ==================== 2. 影像、音频与桌面应用 / Media, Audio & Desktop Apps (6) ==================== -->
-        <article class="card" data-category="media">
-          <div>
-            <div class="card-top">
-              <h3 class="card-title"><a href="https://github.com/Arrow36/RAWBurst2DNG" target="_blank" rel="noopener noreferrer">RAWBurst2DNG</a></h3>
-              <div class="badge-row">
-                <span class="cat-badge">Media</span>
-                <span class="lang-badge">Python</span>
-              </div>
-            </div>
-            <p class="card-desc">Canon RAW Burst CR3 extractor and DNG 1.4/CinemaDNG sequence converter for DaVinci Resolve | 佳能 RAW 连拍 CR3 提取与 DNG 序列转换工具。</p>
-          </div>
-          <div class="topics">
-            <span class="topic">canon</span><span class="topic">cr3</span><span class="topic">raw-burst</span><span class="topic">cinemadng</span><span class="topic">davinci-resolve</span><span class="topic">dng</span>
-          </div>
-          <div class="card-actions">
-            <a class="btn-secondary" href="https://github.com/Arrow36/RAWBurst2DNG" target="_blank" rel="noopener noreferrer">GitHub 源码 / Releases ↗</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="media">
-          <div>
-            <div class="card-top">
-              <h3 class="card-title"><a href="https://github.com/Arrow36/Bluetooth-Music-Canvas" target="_blank" rel="noopener noreferrer">Bluetooth-Music-Canvas</a></h3>
-              <div class="badge-row">
-                <span class="cat-badge">Android TV</span>
-                <span class="lang-badge">Java</span>
-              </div>
-            </div>
-            <p class="card-desc">极简高颜值 Android 蓝牙音频大屏看板 &amp; 桌面黑胶悬浮球（支持电视/车机、毛玻璃唱针循迹、5频段频谱律动与流光歌词）| Android TV &amp; Car Vinyl Bluetooth Music Visualizer.</p>
-          </div>
-          <div class="topics">
-            <span class="topic">android-tv</span><span class="topic">bluetooth-audio</span><span class="topic">vinyl</span><span class="topic">music-visualizer</span><span class="topic">glassmorphism</span><span class="topic">car-infotainment</span>
-          </div>
-          <div class="card-actions">
-            <a class="btn-secondary" href="https://github.com/Arrow36/Bluetooth-Music-Canvas" target="_blank" rel="noopener noreferrer">GitHub 源码 / APK ↗</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="media">
+        <article class="card" data-category="media" data-repo="OWLib-DataTool-GUI" data-default-order="9">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/OWLib-DataTool-GUI" target="_blank" rel="noopener noreferrer">OWLib-DataTool-GUI</a></h3>
@@ -1336,7 +1403,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="media">
+        <article class="card" data-category="media" data-repo="bluetooth-wifi-radar" data-default-order="10">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/bluetooth-wifi-radar" target="_blank" rel="noopener noreferrer">bluetooth-wifi-radar</a></h3>
@@ -1355,7 +1422,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="media">
+        <article class="card" data-category="media" data-repo="cyber-tissue" data-default-order="11">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/cyber-tissue" target="_blank" rel="noopener noreferrer">cyber-tissue</a></h3>
@@ -1374,7 +1441,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="media">
+        <article class="card" data-category="media" data-repo="metube-fnos-media-library" data-default-order="12">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/metube-fnos-media-library" target="_blank" rel="noopener noreferrer">metube-fnos-media-library</a></h3>
@@ -1393,8 +1460,7 @@
           </div>
         </article>
 
-        <!-- ==================== 3. 嵌入式硬件、Linux 移植与驱动修复 / Hardware, Linux & Drivers (9) ==================== -->
-        <article class="card" data-category="hardware">
+        <article class="card" data-category="hardware" data-repo="c10h-sk-l1001-s905l3a-armbian-fnos" data-default-order="13">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/c10h-sk-l1001-s905l3a-armbian-fnos" target="_blank" rel="noopener noreferrer">c10h-sk-l1001-s905l3a-armbian-fnos</a></h3>
@@ -1413,7 +1479,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="hardware">
+        <article class="card" data-category="hardware" data-repo="tianyi-c10h-skyworth-SK-L1001-mod" data-default-order="14">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/tianyi-c10h-skyworth-SK-L1001-mod" target="_blank" rel="noopener noreferrer">tianyi-c10h-skyworth-SK-L1001-mod</a></h3>
@@ -1432,7 +1498,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="hardware">
+        <article class="card" data-category="hardware" data-repo="FoloToy_AI_Passport_Rescue_GPIO18_19" data-default-order="15">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/FoloToy_AI_Passport_Rescue_GPIO18_19" target="_blank" rel="noopener noreferrer">FoloToy_AI_Passport_Rescue_GPIO18_19</a></h3>
@@ -1451,7 +1517,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="hardware">
+        <article class="card" data-category="hardware" data-repo="ai-passport-csi-esp32c3" data-default-order="16">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/ai-passport-csi-esp32c3" target="_blank" rel="noopener noreferrer">ai-passport-csi-esp32c3</a></h3>
@@ -1470,26 +1536,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="hardware">
-          <div>
-            <div class="card-top">
-              <h3 class="card-title"><a href="https://github.com/Arrow36/kindle4-flip-clock" target="_blank" rel="noopener noreferrer">kindle4-flip-clock</a></h3>
-              <div class="badge-row">
-                <span class="cat-badge">E-Ink</span>
-                <span class="lang-badge">Shell</span>
-              </div>
-            </div>
-            <p class="card-desc">Full-screen Flip-Clock KUAL Extension for Kindle 4 Non-Touch (K4NT) | Kindle 4 全屏电子墨水翻页时钟 KUAL 插件。</p>
-          </div>
-          <div class="topics">
-            <span class="topic">kindle</span><span class="topic">kindle4</span><span class="topic">k4nt</span><span class="topic">kual</span><span class="topic">flip-clock</span><span class="topic">e-ink</span>
-          </div>
-          <div class="card-actions">
-            <a class="btn-secondary" href="https://github.com/Arrow36/kindle4-flip-clock" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="hardware">
+        <article class="card" data-category="hardware" data-repo="aidex-x-linx-ble-reader" data-default-order="18">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/aidex-x-linx-ble-reader" target="_blank" rel="noopener noreferrer">aidex-x-linx-ble-reader</a></h3>
@@ -1508,7 +1555,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="hardware">
+        <article class="card" data-category="hardware" data-repo="fnos-bcm4360-wl-repair" data-default-order="19">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/fnos-bcm4360-wl-repair" target="_blank" rel="noopener noreferrer">fnos-bcm4360-wl-repair</a></h3>
@@ -1527,7 +1574,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="hardware">
+        <article class="card" data-category="hardware" data-repo="macbook9-ubuntu-audio-fix" data-default-order="20">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/macbook9-ubuntu-audio-fix" target="_blank" rel="noopener noreferrer">macbook9-ubuntu-audio-fix</a></h3>
@@ -1546,7 +1593,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="hardware">
+        <article class="card" data-category="hardware" data-repo="Enable-CodexSystemProxy" data-default-order="21">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/Enable-CodexSystemProxy" target="_blank" rel="noopener noreferrer">Enable-CodexSystemProxy</a></h3>
@@ -1565,27 +1612,7 @@
           </div>
         </article>
 
-        <!-- ==================== 4. 语言工具与 AI 技能 / NLP & AI Agent Skills (3) ==================== -->
-        <article class="card" data-category="nlp">
-          <div>
-            <div class="card-top">
-              <h3 class="card-title"><a href="https://github.com/Arrow36/Hangul-Hanja-mixed-script" target="_blank" rel="noopener noreferrer">Hangul-Hanja-mixed-script</a></h3>
-              <div class="badge-row">
-                <span class="cat-badge">Korean NLP</span>
-                <span class="lang-badge">Python</span>
-              </div>
-            </div>
-            <p class="card-desc">Hangul → Hanja mixed-script converter · 국한문혼용 변환기 · 韩文→汉谚混写转换器 | Dictionary, etymology &amp; homonym selection.</p>
-          </div>
-          <div class="topics">
-            <span class="topic">hangul</span><span class="topic">hanja</span><span class="topic">gukhanmun</span><span class="topic">korean-nlp</span><span class="topic">mixed-script</span>
-          </div>
-          <div class="card-actions">
-            <a class="btn-secondary" href="https://github.com/Arrow36/Hangul-Hanja-mixed-script" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="nlp">
+        <article class="card" data-category="nlp" data-repo="Hangul-Hanja-mixed-script-CF" data-default-order="23">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/Hangul-Hanja-mixed-script-CF" target="_blank" rel="noopener noreferrer">Hangul-Hanja-mixed-script-CF</a></h3>
@@ -1604,7 +1631,7 @@
           </div>
         </article>
 
-        <article class="card" data-category="nlp">
+        <article class="card" data-category="nlp" data-repo="web-app-icon" data-default-order="24">
           <div>
             <div class="card-top">
               <h3 class="card-title"><a href="https://github.com/Arrow36/web-app-icon" target="_blank" rel="noopener noreferrer">web-app-icon</a></h3>
@@ -1739,11 +1766,20 @@
 
       const searchInput = document.getElementById("searchInput");
       const filterPills = Array.from(document.querySelectorAll(".filter-pill"));
+      const projectGrid = document.getElementById("projectGrid");
       const cards = Array.from(document.querySelectorAll("#projectGrid .card"));
       const resultCount = document.getElementById("resultCount");
       const emptyState = document.getElementById("emptyState");
+      const pinnedFilterPill = document.getElementById("pinnedFilterPill");
 
       let currentFilter = "all";
+
+      function getRepoName(card) {
+        const attr = card.getAttribute("data-repo");
+        if (attr) return attr;
+        const link = card.querySelector(".card-title a");
+        return link ? link.textContent.trim() : "";
+      }
 
       function applyFilters() {
         const q = searchInput.value.trim().toLowerCase();
@@ -1751,7 +1787,10 @@
 
         cards.forEach(function (card) {
           const cat = card.getAttribute("data-category");
-          const matchesCat = currentFilter === "all" || cat === currentFilter;
+          const isPinned = card.getAttribute("data-pinned") === "true";
+          const matchesCat =
+            currentFilter === "all" ||
+            (currentFilter === "pinned" ? isPinned : cat === currentFilter);
           const text = card.textContent.toLowerCase();
           const matchesQuery = !q || text.indexOf(q) !== -1;
 
@@ -1762,6 +1801,71 @@
 
         resultCount.textContent = "显示 " + visible + " / " + cards.length + " 个项目";
         emptyState.classList.toggle("visible", visible === 0);
+      }
+
+      function syncPinnedFromJson() {
+        if (!projectGrid || typeof fetch !== "function") return;
+        fetch("/pinned.json", { cache: "no-store" })
+          .then(function (res) {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            return res.json();
+          })
+          .then(function (data) {
+            if (!data || !Array.isArray(data.pinned) || data.pinned.length === 0) return;
+
+            const rank = Object.create(null);
+            data.pinned.forEach(function (name, idx) {
+              rank[name] = idx;
+            });
+
+            cards.forEach(function (card, idx) {
+              if (!card.hasAttribute("data-default-order")) {
+                card.setAttribute("data-default-order", String(idx));
+              }
+              const repo = getRepoName(card);
+              const isPinned = Object.prototype.hasOwnProperty.call(rank, repo);
+              card.classList.toggle("is-pinned", isPinned);
+              if (isPinned) {
+                card.setAttribute("data-pinned", "true");
+              } else {
+                card.removeAttribute("data-pinned");
+              }
+
+              const badgeRow = card.querySelector(".badge-row");
+              if (badgeRow) {
+                const existingPin = badgeRow.querySelector(".pin-badge");
+                if (isPinned && !existingPin) {
+                  const badge = document.createElement("span");
+                  badge.className = "pin-badge";
+                  badge.title = "GitHub Pinned Repository · GitHub 置顶项目";
+                  badge.textContent = "📌 置顶";
+                  badgeRow.insertBefore(badge, badgeRow.firstChild);
+                } else if (!isPinned && existingPin) {
+                  existingPin.remove();
+                }
+              }
+            });
+
+            cards.sort(function (a, b) {
+              const repoA = getRepoName(a);
+              const repoB = getRepoName(b);
+              const pinA = Object.prototype.hasOwnProperty.call(rank, repoA);
+              const pinB = Object.prototype.hasOwnProperty.call(rank, repoB);
+              if (pinA && pinB) return rank[repoA] - rank[repoB];
+              if (pinA !== pinB) return pinA ? -1 : 1;
+              return Number(a.getAttribute("data-default-order") || 0) - Number(b.getAttribute("data-default-order") || 0);
+            });
+
+            cards.forEach(function (card) {
+              projectGrid.appendChild(card);
+            });
+
+            if (pinnedFilterPill) {
+              pinnedFilterPill.textContent = "📌 置顶精选 (" + data.pinned.length + ")";
+            }
+            applyFilters();
+          })
+          .catch(function () {});
       }
 
       filterPills.forEach(function (pill) {
@@ -1785,6 +1889,8 @@
           card.style.setProperty("--my", y + "px");
         });
       });
+
+      syncPinnedFromJson();
     })();
   </script>
 </body>
