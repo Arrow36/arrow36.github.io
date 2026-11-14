@@ -25,8 +25,13 @@
   <meta name="twitter:title" content="Arrow36 — Open Source Developer &amp; Local-First Web Tools">
   <meta name="twitter:description" content="Local-first WebGPU/WASM web tools, Canon CR3 RAWBurst2DNG, Android TV Bluetooth Music Canvas, Skyworth C10H Linux port &amp; ESP32-C3 CSI tools.">
 
-  <!-- Inline SVG Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2338bdf8'/%3E%3Cstop offset='100%25' stop-color='%236366f1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230f172a'/%3E%3Cpath d='M18 46L32 16L46 46M23 36H41' stroke='url(%23g)' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <!-- Website Icons & Apple Touch Icon (Option 2: Liquid Glass Petal Prism) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:image" content="https://arrow36.github.io/icon-512.png">
+  <meta name="twitter:image" content="https://arrow36.github.io/icon-512.png">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -497,17 +502,12 @@
     }
 
     .brand-mark {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: var(--live-bg);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      font-size: 0.92rem;
-      border: 1px solid rgba(255, 255, 255, 0.78);
-      box-shadow: inset 0 1.5px 1px rgba(255, 255, 255, 0.85), 0 6px 16px -4px rgba(59, 136, 200, 0.45);
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 4px 12px -2px rgba(59, 136, 200, 0.35);
     }
 
     .topbar-actions {
@@ -1077,7 +1077,7 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="https://arrow36.github.io/">
-        <span class="brand-mark">A</span>
+        <img class="brand-mark" src="/apple-touch-icon.png" width="32" height="32" alt="Arrow36 Icon">
         <span>Arrow36 · Open Source Hub</span>
       </a>
       <div class="topbar-actions">
