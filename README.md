@@ -27,6 +27,7 @@
 - **[bluetooth-wifi-radar](https://github.com/Arrow36/bluetooth-wifi-radar)** — Windows 本地蓝牙、BLE 与 Wi-Fi 信号扫描及雷达可视化工具
 - **[cyber-tissue](https://github.com/Arrow36/cyber-tissue)** — 赛博抽纸：基于 Canvas 2D 布料粒子与碰撞物理模拟的解压互动网页
 - **[metube-fnos-media-library](https://github.com/Arrow36/metube-fnos-media-library)** — MeTube + yt-dlp 下载 YouTube 并自动生成 NFO 元数据导入飞牛影视 / Jellyfin / Emby
+- **[SurfaceHeadphones-Control](https://github.com/Arrow36/SurfaceHeadphones-Control)** — Standalone Windows controller & Surface App v75 rollback script for Microsoft Surface Headphones (direct Bluetooth RFCOMM/GAIA control for ANC, volume, 5-band EQ - works without Surface App or physical dials). 微软 Surface Headphones 独立蓝牙直连控制面板与官方应用回退工具。
 
 ## 🔧 嵌入式硬件、Linux 移植与驱动修复 / Hardware, Linux & Drivers
 
