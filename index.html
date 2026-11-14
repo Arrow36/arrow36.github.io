@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrow36 — Open Source Developer &amp; Local-First Web Tools | 独立开发者作品集与本地优先工具箱</title>
+  <meta name="description" content="Explore 25+ open-source tools and hardware research projects by Arrow36: FilmNet WebGPU film emulation, Canon CR3 RAW Burst to CinemaDNG converter, SewShot screenshot stitcher, Android TV vinyl music visualizer, Skyworth C10H Armbian/fnOS Linux port, ESP32-C3 Wi-Fi CSI monitor, and more.">
+  <meta name="keywords" content="Arrow36, RAWBurst2DNG, Canon CR3 RAW Burst, CinemaDNG, DaVinci Resolve, FilmNet RealGrain, WebGPU film emulation, SewShot, Bluetooth Music Canvas, Skyworth SK-L1001, C10H Armbian, fnOS, ESP32-C3 Wi-Fi CSI, Hangul Hanja converter, Kindle 4 flip clock">
+  <meta name="author" content="Arrow36">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arrow36.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arrow36 — Open Source Developer &amp; Local-First Web Tools | 独立开发者作品集">
+  <meta property="og:description" content="25 open-source tools across WebGPU film emulation, Canon RAW Burst conversion, privacy-first browser utilities, Android TV visualizers, and embedded Linux / ESP32 hardware research.">
+  <meta property="og:url" content="https://arrow36.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arrow36 Open Source Hub">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arrow36 — Open Source Developer &amp; Local-First Web Tools">
+  <meta name="twitter:description" content="Local-first WebGPU/WASM web tools, Canon CR3 RAWBurst2DNG, Android TV Bluetooth Music Canvas, Skyworth C10H Linux port &amp; ESP32-C3 CSI tools.">
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2338bdf8'/%3E%3Cstop offset='100%25' stop-color='%236366f1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230f172a'/%3E%3Cpath d='M18 46L32 16L46 46M23 36H41' stroke='url(%23g)' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://arrow36.github.io/#profile",
+        "url": "https://arrow36.github.io/",
+        "name": "Arrow36 — Open Source Developer & Local-First Web Tools",
+        "inLanguage": ["zh-CN", "en"],
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://github.com/Arrow36#person",
+          "name": "Arrow36",
+          "url": "https://arrow36.github.io/",
+          "sameAs": [
+            "https://github.com/Arrow36"
+          ],
+          "knowsAbout": [
+            "WebGPU",
+            "WebAssembly",
+            "Local-First Web Applications",
+            "Canon CR3 CinemaDNG",
+            "Embedded Linux",
+            "ESP32-C3 Wi-Fi CSI",
+            "Android TV",
+            "Korean NLP"
+          ]
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://arrow36.github.io/#projects",
+        "name": "Arrow36 Open Source Software & Tools",
+        "numberOfItems": 10,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "FilmNet RealGrain Web",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Web Browser (WebGPU / WASM)",
+              "url": "https://arrow36.github.io/filmnet-realgrain-web/",
+              "codeRepository": "https://github.com/Arrow36/filmnet-realgrain-web",
+              "description": "Local WebGPU/WASM AI Film Emulation, Color Grading & RealGrain Tool in Browser with zero server uploads.",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "SewShot",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "Web Browser",
+              "url": "https://arrow36.github.io/SewShot/",
+              "codeRepository": "https://github.com/Arrow36/SewShot",
+              "description": "Local-first screenshot stitching in your browser with auto-deduplication, seam fine-tuning, cropping, and segmented export.",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "QR Code XP",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "Web Browser",
+              "url": "https://arrow36.github.io/qr-code-xp/",
+              "codeRepository": "https://github.com/Arrow36/qr-code-xp",
+              "description": "A Windows XP-styled QR code workbench for generating, scanning, analyzing, and exporting QR codes.",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Smart Cash Change",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": "Web Browser",
+              "url": "https://arrow36.github.io/smart-cash-change/",
+              "codeRepository": "https://github.com/Arrow36/smart-cash-change",
+              "description": "Offline single-file RMB smart cash change calculator to minimize bills and coins during cash transactions.",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Neon Noise",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Web Browser (Web Audio API)",
+              "url": "https://arrow36.github.io/neon-noise/",
+              "codeRepository": "https://github.com/Arrow36/neon-noise",
+              "description": "Real-time Web Audio Noise Spectrum Analyzer with 20-second waterfall spectrogram history.",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Bushibushi Suzhou (不时不食：苏州)",
+              "applicationCategory": "ReferenceApplication",
+              "operatingSystem": "Web Browser",
+              "url": "https://arrow36.github.io/bushibushi-suzhou/",
+              "codeRepository": "https://github.com/Arrow36/bushibushi-suzhou",
+              "description": "Interactive timeline of Suzhou seasonal cuisine across the 24 solar terms.",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Qingxu Atlas (情绪图谱)",
+              "applicationCategory": "ReferenceApplication",
+              "operatingSystem": "Web Browser",
+              "url": "https://arrow36.github.io/qingxu-atlas/",
+              "codeRepository": "https://github.com/Arrow36/qingxu-atlas",
+              "description": "Interactive pan and zoom atlas of Chinese emotion vocabulary.",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "RAWBurst2DNG",
+              "programmingLanguage": "Python",
+              "codeRepository": "https://github.com/Arrow36/RAWBurst2DNG",
+              "url": "https://github.com/Arrow36/RAWBurst2DNG",
+              "description": "Canon RAW Burst CR3 extractor and DNG 1.4/CinemaDNG sequence converter for DaVinci Resolve."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "Bluetooth-Music-Canvas",
+              "programmingLanguage": "Java",
+              "codeRepository": "https://github.com/Arrow36/Bluetooth-Music-Canvas",
+              "url": "https://github.com/Arrow36/Bluetooth-Music-Canvas",
+              "description": "Minimalist Android TV and car infotainment Bluetooth vinyl music visualizer with 5-band spectrum and synced lyrics."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "Hangul-Hanja-mixed-script",
+              "programmingLanguage": "Python",
+              "codeRepository": "https://github.com/Arrow36/Hangul-Hanja-mixed-script",
+              "url": "https://github.com/Arrow36/Hangul-Hanja-mixed-script",
+              "description": "Hangul to Hanja mixed-script converter with dictionary lookup, etymology, and homonym selection."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-elevated: #111827;
+      --card: rgba(17, 24, 39, 0.82);
+      --card-hover: rgba(30, 41, 59, 0.92);
+      --border: rgba(148, 163, 184, 0.16);
+      --border-hover: rgba(56, 189, 248, 0.45);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-soft: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-2: #818cf8;
+      --accent-bg: rgba(56, 189, 248, 0.12);
+      --pill-bg: rgba(148, 163, 184, 0.1);
+      --pill-active-bg: linear-gradient(135deg, #0284c7, #4f46e5);
+      --live-bg: linear-gradient(135deg, #0ea5e9, #6366f1);
+      --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+      --glow: radial-gradient(800px circle at 20% -10%, rgba(56, 189, 248, 0.16), transparent 60%),
+              radial-gradient(700px circle at 85% 5%, rgba(99, 102, 241, 0.14), transparent 55%);
+    }
+
+    html[data-theme="light"] {
+      --bg: #f8fafc;
+      --bg-elevated: #ffffff;
+      --card: rgba(255, 255, 255, 0.92);
+      --card-hover: #ffffff;
+      --border: rgba(15, 23, 42, 0.1);
+      --border-hover: rgba(2, 132, 199, 0.45);
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-soft: #334155;
+      --accent: #0284c7;
+      --accent-2: #4f46e5;
+      --accent-bg: rgba(2, 132, 199, 0.1);
+      --pill-bg: rgba(15, 23, 42, 0.06);
+      --pill-active-bg: linear-gradient(135deg, #0284c7, #4f46e5);
+      --live-bg: linear-gradient(135deg, #0284c7, #4f46e5);
+      --shadow: 0 10px 28px -12px rgba(15, 23, 42, 0.12);
+      --glow: radial-gradient(800px circle at 20% -10%, rgba(56, 189, 248, 0.18), transparent 60%),
+              radial-gradient(700px circle at 85% 5%, rgba(99, 102, 241, 0.14), transparent 55%);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      background-image: var(--glow);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header / Nav */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: color-mix(in srgb, var(--bg) 80%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--pill-bg);
+      color: var(--text-soft);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.15s, color 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 52px 0 32px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--accent-bg);
+      border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(1.9rem, 4vw, 2.85rem);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 780px;
+      margin: 0 0 24px;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+
+    .stats-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .stat-chip {
+      padding: 8px 14px;
+      border-radius: 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+
+    .stat-chip strong {
+      color: var(--text);
+      margin-right: 4px;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 28px;
+      padding: 16px;
+      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .search-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+    .search-wrap {
+      position: relative;
+      flex: 1 1 300px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 11px 14px 11px 40px;
+      border-radius: 11px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.94rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+    }
+
+    .result-count {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-pill {
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--pill-bg);
+      color: var(--text-soft);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+    }
+
+    .filter-pill.active {
+      background: var(--pill-active-bg);
+      border-color: transparent;
+      color: #ffffff;
+    }
+
+    /* Section Headings */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 8px 0 18px;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header span {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* Grid & Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 18px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 20px;
+      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-hover);
+      background: var(--card-hover);
+    }
+
+    .card[hidden] {
+      display: none;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .card-title a:hover {
+      color: var(--accent);
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .lang-badge,
+    .cat-badge {
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--pill-bg);
+      color: var(--text-soft);
+      white-space: nowrap;
+    }
+
+    .cat-badge.is-live {
+      background: rgba(16, 185, 129, 0.14);
+      border-color: rgba(16, 185, 129, 0.35);
+      color: #34d399;
+    }
+
+    html[data-theme="light"] .cat-badge.is-live {
+      color: #059669;
+    }
+
+    .card-desc {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .topic {
+      font-size: 0.74rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 13px;
+      border-radius: 9px;
+      background: var(--live-bg);
+      color: #fff;
+      font-size: 0.83rem;
+      font-weight: 600;
+      transition: opacity 0.18s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      background: var(--pill-bg);
+      color: var(--text-soft);
+      font-size: 0.83rem;
+      font-weight: 500;
+      transition: border-color 0.18s, color 0.18s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+    }
+
+    .empty-state {
+      display: none;
+      text-align: center;
+      padding: 48px 20px;
+      border-radius: 16px;
+      border: 1px dashed var(--border);
+      color: var(--text-muted);
+      margin-bottom: 48px;
+    }
+
+    .empty-state.visible {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      color: var(--text-muted);
+      font-size: 0.86rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 36px 0 22px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="https://arrow36.github.io/">
+        <span class="brand-mark">A</span>
+        <span>Arrow36 · Open Source Hub</span>
+      </a>
+      <div class="topbar-actions">
+        <a class="btn-ghost" href="https://github.com/Arrow36?tab=repositories" target="_blank" rel="noopener noreferrer">
+          GitHub (25 Repos) ↗
+        </a>
+        <button type="button" class="btn-ghost" id="themeToggle" aria-label="Toggle color theme">
+          🌓 主题
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-badge">⚡ Local-First Web Tools · Hardware Hacking · Media Utilities</div>
+      <h1>
+        <span class="gradient-text">Arrow36</span> Open-Source Projects<br>
+        独立开发者作品集与本地优先工具箱
+      </h1>
+      <p class="hero-subtitle">
+        专注浏览器本地运行（WebGPU / WASM / Canvas）、影像处理（佳能 CR3 RAW 连拍转 CinemaDNG / FilmNet 胶片模拟）、Android TV 黑胶可视化，以及嵌入式 Linux（Armbian / fnOS / ESP32-C3）与系统级实用工具。所有在线工具均无需上传数据，开箱即用。
+      </p>
+      <div class="stats-bar">
+        <div class="stat-chip"><strong>25</strong> 开源项目 / Repositories</div>
+        <div class="stat-chip"><strong>7</strong> 在线即用 Web 应用 / Live Pages</div>
+        <div class="stat-chip"><strong>100%</strong> 隐私优先 · 本地运行</div>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Project Search and Filters">
+      <div class="search-row">
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input
+            id="searchInput"
+            class="search-input"
+            type="search"
+            placeholder="搜索项目名称、关键词或技术栈（如 WebGPU、Canon、Kindle、fnOS、ESP32、QR）..."
+            autocomplete="off"
+          >
+        </div>
+        <div class="result-count" id="resultCount">显示 25 / 25 个项目</div>
+      </div>
+      <div class="filter-pills" role="tablist" aria-label="Category filters">
+        <button type="button" class="filter-pill active" data-filter="all">全部 (25)</button>
+        <button type="button" class="filter-pill" data-filter="web">🌐 在线 Web 工具 (7)</button>
+        <button type="button" class="filter-pill" data-filter="media">🎬 影像与桌面工具 (6)</button>
+        <button type="button" class="filter-pill" data-filter="hardware">🔧 硬件与 Linux 移植 (9)</button>
+        <button type="button" class="filter-pill" data-filter="nlp">📚 语言与 AI 技能 (3)</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="projectsHeading">
+      <div class="section-header">
+        <h2 id="projectsHeading">全部开源项目目录 · All Projects</h2>
+        <span>点击「在线体验」可直接运行已部署的 GitHub Pages 工具</span>
+      </div>
+
+      <div class="grid" id="projectGrid">
+        <!-- ==================== 1. 在线 Web 工具 / Live Web Apps (7) ==================== -->
+        <article class="card" data-category="web">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://arrow36.github.io/filmnet-realgrain-web/" target="_blank" rel="noopener noreferrer">filmnet-realgrain-web</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge is-live">Live Web</span>
+                <span class="lang-badge">TypeScript</span>
+              </div>
+            </div>
+            <p class="card-desc">Local WebGPU/WASM AI Film Emulation, Color Grading &amp; RealGrain Tool in Browser | 浏览器本地运行的 FilmNet AI 胶片调色与 RealGrain 颗粒工具，图片无需上传。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">webgpu</span><span class="topic">webassembly</span><span class="topic">film-emulation</span><span class="topic">color-grading</span><span class="topic">film-grain</span><span class="topic">local-first</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-primary" href="https://arrow36.github.io/filmnet-realgrain-web/" target="_blank" rel="noopener noreferrer">🚀 在线体验 / Launch</a>
+            <a class="btn-secondary" href="https://github.com/Arrow36/filmnet-realgrain-web" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://arrow36.github.io/SewShot/" target="_blank" rel="noopener noreferrer">SewShot</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge is-live">Live Web</span>
+                <span class="lang-badge">JavaScript</span>
+              </div>
+            </div>
+            <p class="card-desc">在浏览器本地拼接截图：自动去重、接缝微调、裁剪与 PNG / JPG / 分段导出。Local-first screenshot stitching in your browser.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">image-stitching</span><span class="topic">screenshot</span><span class="topic">canvas</span><span class="topic">local-first</span><span class="topic">privacy</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-primary" href="https://arrow36.github.io/SewShot/" target="_blank" rel="noopener noreferrer">🚀 在线体验 / Launch</a>
+            <a class="btn-secondary" href="https://github.com/Arrow36/SewShot" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://arrow36.github.io/qr-code-xp/" target="_blank" rel="noopener noreferrer">qr-code-xp</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge is-live">Live Web</span>
+                <span class="lang-badge">TypeScript</span>
+              </div>
+            </div>
+            <p class="card-desc">A Windows XP–styled QR code workbench for generating, scanning, analyzing, and exporting QR codes. 一个 Windows XP 风格的二维码实验台，支持生成、扫码、编码分析和自定义分辨率导出。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">qr-code</span><span class="topic">qrcode-generator</span><span class="topic">qrcode-scanner</span><span class="topic">windows-xp</span><span class="topic">retro-ui</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-primary" href="https://arrow36.github.io/qr-code-xp/" target="_blank" rel="noopener noreferrer">🚀 在线体验 / Launch</a>
+            <a class="btn-secondary" href="https://github.com/Arrow36/qr-code-xp" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://arrow36.github.io/smart-cash-change/" target="_blank" rel="noopener noreferrer">smart-cash-change</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge is-live">Live Web</span>
+                <span class="lang-badge">HTML</span>
+              </div>
+            </div>
+            <p class="card-desc">轻量级人民币智能找零计算器：主动建议补付少量零钱以减少现金张数，支持付款推荐、抹零与撤销，纯前端单文件离线可用 | Smart Cash Change Calculator.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">cash-calculator</span><span class="topic">change-calculator</span><span class="topic">rmb</span><span class="topic">offline</span><span class="topic">single-file</span><span class="topic">pwa</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-primary" href="https://arrow36.github.io/smart-cash-change/" target="_blank" rel="noopener noreferrer">🚀 在线体验 / Launch</a>
+            <a class="btn-secondary" href="https://github.com/Arrow36/smart-cash-change" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://arrow36.github.io/neon-noise/" target="_blank" rel="noopener noreferrer">neon-noise</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge is-live">Live Web</span>
+                <span class="lang-badge">HTML</span>
+              </div>
+            </div>
+            <p class="card-desc">Real-time Web Audio Noise Spectrum Analyzer with 20s Waterfall History | 实时网页噪音频谱分析仪，支持分析最近 20 秒的频谱变化与瀑布图。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">spectrum-analyzer</span><span class="topic">audio-visualizer</span><span class="topic">web-audio-api</span><span class="topic">noise-meter</span><span class="topic">fft</span><span class="topic">spectrogram</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-primary" href="https://arrow36.github.io/neon-noise/" target="_blank" rel="noopener noreferrer">🚀 在线体验 / Launch</a>
+            <a class="btn-secondary" href="https://github.com/Arrow36/neon-noise" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://arrow36.github.io/bushibushi-suzhou/" target="_blank" rel="noopener noreferrer">bushibushi-suzhou</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge is-live">Live Web</span>
+                <span class="lang-badge">TypeScript</span>
+              </div>
+            </div>
+            <p class="card-desc">不时不食：苏州全年 24 节气与时令美食交互时间轴 | Interactive Timeline of Suzhou Seasonal Cuisine &amp; 24 Solar Terms.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">suzhou</span><span class="topic">chinese-food</span><span class="topic">solar-terms</span><span class="topic">data-visualization</span><span class="topic">timeline</span><span class="topic">culture</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-primary" href="https://arrow36.github.io/bushibushi-suzhou/" target="_blank" rel="noopener noreferrer">🚀 在线体验 / Launch</a>
+            <a class="btn-secondary" href="https://github.com/Arrow36/bushibushi-suzhou" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://arrow36.github.io/qingxu-atlas/" target="_blank" rel="noopener noreferrer">qingxu-atlas</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge is-live">Live Web</span>
+                <span class="lang-badge">TypeScript</span>
+              </div>
+            </div>
+            <p class="card-desc">情绪图谱 (Qingxu Atlas) — 一张可拖拽、可缩放的交互式中文情绪词汇地图 | Interactive Pan &amp; Zoom Atlas of Chinese Emotion Vocabulary.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">emotion-atlas</span><span class="topic">data-visualization</span><span class="topic">interactive-map</span><span class="topic">psychology</span><span class="topic">chinese-vocabulary</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-primary" href="https://arrow36.github.io/qingxu-atlas/" target="_blank" rel="noopener noreferrer">🚀 在线体验 / Launch</a>
+            <a class="btn-secondary" href="https://github.com/Arrow36/qingxu-atlas" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
+          </div>
+        </article>
+
+        <!-- ==================== 2. 影像、音频与桌面应用 / Media, Audio & Desktop Apps (6) ==================== -->
+        <article class="card" data-category="media">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/RAWBurst2DNG" target="_blank" rel="noopener noreferrer">RAWBurst2DNG</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Media</span>
+                <span class="lang-badge">Python</span>
+              </div>
+            </div>
+            <p class="card-desc">Canon RAW Burst CR3 extractor and DNG 1.4/CinemaDNG sequence converter for DaVinci Resolve | 佳能 RAW 连拍 CR3 提取与 DNG 序列转换工具。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">canon</span><span class="topic">cr3</span><span class="topic">raw-burst</span><span class="topic">cinemadng</span><span class="topic">davinci-resolve</span><span class="topic">dng</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/RAWBurst2DNG" target="_blank" rel="noopener noreferrer">GitHub 源码 / Releases ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="media">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/Bluetooth-Music-Canvas" target="_blank" rel="noopener noreferrer">Bluetooth-Music-Canvas</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Android TV</span>
+                <span class="lang-badge">Java</span>
+              </div>
+            </div>
+            <p class="card-desc">极简高颜值 Android 蓝牙音频大屏看板 &amp; 桌面黑胶悬浮球（支持电视/车机、毛玻璃唱针循迹、5频段频谱律动与流光歌词）| Android TV &amp; Car Vinyl Bluetooth Music Visualizer.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">android-tv</span><span class="topic">bluetooth-audio</span><span class="topic">vinyl</span><span class="topic">music-visualizer</span><span class="topic">glassmorphism</span><span class="topic">car-infotainment</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/Bluetooth-Music-Canvas" target="_blank" rel="noopener noreferrer">GitHub 源码 / APK ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="media">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/OWLib-DataTool-GUI" target="_blank" rel="noopener noreferrer">OWLib-DataTool-GUI</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Desktop</span>
+                <span class="lang-badge">C#</span>
+              </div>
+            </div>
+            <p class="card-desc">Unofficial Windows WPF GUI Launcher for Overwatch 2 OWLib DataTool with game-data selectors, bilingual UI &amp; live logs | 守望先锋 DataTool 图形化提取启动器。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">overwatch-2</span><span class="topic">owlib</span><span class="topic">datatool</span><span class="topic">wpf</span><span class="topic">webview2</span><span class="topic">windows</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/OWLib-DataTool-GUI" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="media">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/bluetooth-wifi-radar" target="_blank" rel="noopener noreferrer">bluetooth-wifi-radar</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Desktop</span>
+                <span class="lang-badge">TypeScript</span>
+              </div>
+            </div>
+            <p class="card-desc">Windows 本地蓝牙与 Wi&#x2011;Fi 信号扫描、解析和雷达可视化工具。A privacy-first Windows dashboard for visualizing nearby Bluetooth, BLE and Wi-Fi signals with raw advertisement and Beacon details.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">ble-scanner</span><span class="topic">wifi-scanner</span><span class="topic">ibeacon</span><span class="topic">radar-visualization</span><span class="topic">privacy-first</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/bluetooth-wifi-radar" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="media">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/cyber-tissue" target="_blank" rel="noopener noreferrer">cyber-tissue</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Interactive</span>
+                <span class="lang-badge">JavaScript</span>
+              </div>
+            </div>
+            <p class="card-desc">赛博抽纸 (Cyber Tissue) — 基于 Canvas 2D 布料粒子与碰撞物理模拟的纯前端互动解压抽纸网页 | Interactive 2D cloth physics tissue box simulator.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">canvas2d</span><span class="topic">cloth-simulation</span><span class="topic">physics-2d</span><span class="topic">interactive-web</span><span class="topic">creative-coding</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/cyber-tissue" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="media">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/metube-fnos-media-library" target="_blank" rel="noopener noreferrer">metube-fnos-media-library</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">NAS / Media</span>
+                <span class="lang-badge">Python</span>
+              </div>
+            </div>
+            <p class="card-desc">使用 MeTube + yt-dlp 下载 YouTube 视频并自动生成 NFO 元数据、封面与字幕，无缝导入飞牛影视 (fnOS) / Jellyfin / Emby 媒体库。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">metube</span><span class="topic">yt-dlp</span><span class="topic">fnos</span><span class="topic">nfo-generator</span><span class="topic">jellyfin</span><span class="topic">emby</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/metube-fnos-media-library" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <!-- ==================== 3. 嵌入式硬件、Linux 移植与驱动修复 / Hardware, Linux & Drivers (9) ==================== -->
+        <article class="card" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/c10h-sk-l1001-s905l3a-armbian-fnos" target="_blank" rel="noopener noreferrer">c10h-sk-l1001-s905l3a-armbian-fnos</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Embedded Linux</span>
+                <span class="lang-badge">C</span>
+              </div>
+            </div>
+            <p class="card-desc">天翼智屏 C10H (创维 SK-L1001 / S905L3A) 外置启动 Armbian 桌面与飞牛 fnOS 适配：MIPI-DSI 内屏、JD9366TC 触控与 W2 Wi-Fi 驱动 | Linux on Skyworth SK-L1001.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">amlogic</span><span class="topic">s905l3a</span><span class="topic">armbian</span><span class="topic">fnos</span><span class="topic">mipi-dsi</span><span class="topic">jd9366tc</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/c10h-sk-l1001-s905l3a-armbian-fnos" target="_blank" rel="noopener noreferrer">GitHub 源码与适配文档 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/tianyi-c10h-skyworth-SK-L1001-mod" target="_blank" rel="noopener noreferrer">tianyi-c10h-skyworth-SK-L1001-mod</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Hardware Mod</span>
+                <span class="lang-badge">Python</span>
+              </div>
+            </div>
+            <p class="card-desc">天翼智屏 C10H (创维 SK-L1001 / p291_iptv) 免拆机破解、持久化无线 Root ADB、系统精简防升级与 WebView IPTV 直播源提取指南 | Skyworth C10H Root &amp; Mod Guide.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">skyworth</span><span class="topic">sk-l1001</span><span class="topic">c10h</span><span class="topic">adb</span><span class="topic">root</span><span class="topic">iptv</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/tianyi-c10h-skyworth-SK-L1001-mod" target="_blank" rel="noopener noreferrer">GitHub 源码与指南 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/FoloToy_AI_Passport_Rescue_GPIO18_19" target="_blank" rel="noopener noreferrer">FoloToy_AI_Passport_Rescue_GPIO18_19</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">ESP32-C3</span>
+                <span class="lang-badge">Guide</span>
+              </div>
+            </div>
+            <p class="card-desc">FoloToy AI Passport (ESP32-C3) 误改 GPIO18/19 导致 USB 失联与 esptool 超时的救砖指南：WinUSB Interface 2 修复与 OpenOCD JTAG 刷机恢复。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">esp32-c3</span><span class="topic">folotoy</span><span class="topic">openocd</span><span class="topic">jtag</span><span class="topic">winusb</span><span class="topic">unbrick</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/FoloToy_AI_Passport_Rescue_GPIO18_19" target="_blank" rel="noopener noreferrer">GitHub 救砖教程 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/ai-passport-csi-esp32c3" target="_blank" rel="noopener noreferrer">ai-passport-csi-esp32c3</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">ESP32-C3</span>
+                <span class="lang-badge">C</span>
+              </div>
+            </div>
+            <p class="card-desc">Turn FoloToy AI Passport (ESP32-C3) into a portable Wi-Fi CSI (Channel State Information) &amp; motion disturbance monitor | 便携式 Wi-Fi CSI 信道感知观察仪。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">esp32-c3</span><span class="topic">wifi-csi</span><span class="topic">wifi-sensing</span><span class="topic">esp-idf</span><span class="topic">folotoy</span><span class="topic">iot</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/ai-passport-csi-esp32c3" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/kindle4-flip-clock" target="_blank" rel="noopener noreferrer">kindle4-flip-clock</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">E-Ink</span>
+                <span class="lang-badge">Shell</span>
+              </div>
+            </div>
+            <p class="card-desc">Full-screen Flip-Clock KUAL Extension for Kindle 4 Non-Touch (K4NT) | Kindle 4 全屏电子墨水翻页时钟 KUAL 插件。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">kindle</span><span class="topic">kindle4</span><span class="topic">k4nt</span><span class="topic">kual</span><span class="topic">flip-clock</span><span class="topic">e-ink</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/kindle4-flip-clock" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/aidex-x-linx-ble-reader" target="_blank" rel="noopener noreferrer">aidex-x-linx-ble-reader</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">BLE</span>
+                <span class="lang-badge">Python</span>
+              </div>
+            </div>
+            <p class="card-desc">Unofficial Windows BLE Advertisement Reader for MicroTech AiDEX X &amp; LinX CGM Research | 微泰动态血糖仪 AiDEX X / LinX 蓝牙 BLE 广播读取研究工具。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">ble</span><span class="topic">cgm</span><span class="topic">aidex</span><span class="topic">linx</span><span class="topic">bleak</span><span class="topic">windows</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/aidex-x-linx-ble-reader" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/fnos-bcm4360-wl-repair" target="_blank" rel="noopener noreferrer">fnos-bcm4360-wl-repair</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Linux Driver</span>
+                <span class="lang-badge">Shell</span>
+              </div>
+            </div>
+            <p class="card-desc">飞牛 fnOS (Debian Linux) Broadcom BCM4360 / BCM94360CS2 无线网卡 wl (broadcom-sta-dkms) 驱动安装与内核升级自愈工具。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">fnos</span><span class="topic">broadcom</span><span class="topic">bcm4360</span><span class="topic">bcm94360cs2</span><span class="topic">dkms</span><span class="topic">debian</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/fnos-bcm4360-wl-repair" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/macbook9-ubuntu-audio-fix" target="_blank" rel="noopener noreferrer">macbook9-ubuntu-audio-fix</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Linux Driver</span>
+                <span class="lang-badge">C</span>
+              </div>
+            </div>
+            <p class="card-desc">One-click Ubuntu / Linux internal speaker audio fix (CS4208 DKMS + PipeWire) for 12-inch MacBook 2016 (MacBook9,1) | MacBook 12寸 Linux 扬声器无声修复。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">macbook9-1</span><span class="topic">macbook-12</span><span class="topic">cs4208</span><span class="topic">ubuntu</span><span class="topic">pipewire</span><span class="topic">dkms</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/macbook9-ubuntu-audio-fix" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/Enable-CodexSystemProxy" target="_blank" rel="noopener noreferrer">Enable-CodexSystemProxy</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Windows CLI</span>
+                <span class="lang-badge">PowerShell</span>
+              </div>
+            </div>
+            <p class="card-desc">让 Windows 版 OpenAI Codex CLI 遵循系统代理（关闭 TUN 后仍可正常联网）| Force Windows Codex to respect system HTTP/SOCKS proxy without TUN mode.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">codex</span><span class="topic">openai-codex</span><span class="topic">windows-proxy</span><span class="topic">system-proxy</span><span class="topic">powershell</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/Enable-CodexSystemProxy" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <!-- ==================== 4. 语言工具与 AI 技能 / NLP & AI Agent Skills (3) ==================== -->
+        <article class="card" data-category="nlp">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/Hangul-Hanja-mixed-script" target="_blank" rel="noopener noreferrer">Hangul-Hanja-mixed-script</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Korean NLP</span>
+                <span class="lang-badge">Python</span>
+              </div>
+            </div>
+            <p class="card-desc">Hangul → Hanja mixed-script converter · 국한문혼용 변환기 · 韩文→汉谚混写转换器 | Dictionary, etymology &amp; homonym selection.</p>
+          </div>
+          <div class="topics">
+            <span class="topic">hangul</span><span class="topic">hanja</span><span class="topic">gukhanmun</span><span class="topic">korean-nlp</span><span class="topic">mixed-script</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/Hangul-Hanja-mixed-script" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="nlp">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/Hangul-Hanja-mixed-script-CF" target="_blank" rel="noopener noreferrer">Hangul-Hanja-mixed-script-CF</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">Cloudflare</span>
+                <span class="lang-badge">JavaScript</span>
+              </div>
+            </div>
+            <p class="card-desc">Serverless Hangul-to-Hanja mixed-script converter on Cloudflare Workers + D1 + Kiwi WASM | 基于 Cloudflare 免费架构的韩汉混写转换器 (국한문혼용 변환기)。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">cloudflare-workers</span><span class="topic">cloudflare-d1</span><span class="topic">kiwi-nlp</span><span class="topic">webassembly</span><span class="topic">hanja</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/Hangul-Hanja-mixed-script-CF" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="nlp">
+          <div>
+            <div class="card-top">
+              <h3 class="card-title"><a href="https://github.com/Arrow36/web-app-icon" target="_blank" rel="noopener noreferrer">web-app-icon</a></h3>
+              <div class="badge-row">
+                <span class="cat-badge">AI Skill</span>
+                <span class="lang-badge">Skill</span>
+              </div>
+            </div>
+            <p class="card-desc">AI Agent Skill for configuring &amp; fixing iOS Safari 'Add to Home Screen' icons (apple-touch-icon) and PWA web app manifests | iPhone 主屏幕图标配置与修复 AI 技能。</p>
+          </div>
+          <div class="topics">
+            <span class="topic">agent-skill</span><span class="topic">claude-code</span><span class="topic">cursor</span><span class="topic">pwa</span><span class="topic">apple-touch-icon</span><span class="topic">ios-safari</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn-secondary" href="https://github.com/Arrow36/web-app-icon" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        没有找到匹配的项目，请尝试更换关键词或切换回「全部 (25)」。
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Arrow36 · Built for fast discovery &amp; open-source sharing on GitHub Pages.</div>
+      <div class="footer-links">
+        <a href="https://github.com/Arrow36" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+        <a href="https://github.com/Arrow36?tab=repositories" target="_blank" rel="noopener noreferrer">All Repositories</a>
+        <a href="https://arrow36.github.io/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const themeBtn = document.getElementById("themeToggle");
+      const savedTheme = localStorage.getItem("arrow36-theme");
+      if (savedTheme === "light" || savedTheme === "dark") {
+        root.setAttribute("data-theme", savedTheme);
+      } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+        root.setAttribute("data-theme", "light");
+      }
+
+      themeBtn.addEventListener("click", function () {
+        const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+        root.setAttribute("data-theme", next);
+        localStorage.setItem("arrow36-theme", next);
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      const filterPills = Array.from(document.querySelectorAll(".filter-pill"));
+      const cards = Array.from(document.querySelectorAll("#projectGrid .card"));
+      const resultCount = document.getElementById("resultCount");
+      const emptyState = document.getElementById("emptyState");
+
+      let currentFilter = "all";
+
+      function applyFilters() {
+        const q = searchInput.value.trim().toLowerCase();
+        let visible = 0;
+
+        cards.forEach(function (card) {
+          const cat = card.getAttribute("data-category");
+          const matchesCat = currentFilter === "all" || cat === currentFilter;
+          const text = card.textContent.toLowerCase();
+          const matchesQuery = !q || text.indexOf(q) !== -1;
+
+          const show = matchesCat && matchesQuery;
+          card.hidden = !show;
+          if (show) visible += 1;
+        });
+
+        resultCount.textContent = "显示 " + visible + " / " + cards.length + " 个项目";
+        emptyState.classList.toggle("visible", visible === 0);
+      }
+
+      filterPills.forEach(function (pill) {
+        pill.addEventListener("click", function () {
+          currentFilter = pill.getAttribute("data-filter") || "all";
+          filterPills.forEach(function (p) {
+            p.classList.toggle("active", p === pill);
+          });
+          applyFilters();
+        });
+      });
+
+      searchInput.addEventListener("input", applyFilters);
+    })();
+  </script>
+</body>
+</html>
