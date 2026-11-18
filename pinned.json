@@ -1,6 +1,6 @@
 {
   "owner": "Arrow36",
-  "updatedAt": "2026-11-14T21:00:36Z",
+  "updatedAt": "2026-11-18T18:30:47Z",
   "pinned": [
     "Bluetooth-Music-Canvas",
     "neon-noise",
@@ -63,8 +63,8 @@
       "name": "Bluetooth-Music-Canvas",
       "html_url": "https://github.com/Arrow36/Bluetooth-Music-Canvas",
       "description": "极简高颜值 Android 蓝牙音频大屏看板 & 桌面黑胶悬浮球（支持电视/车机、毛玻璃唱针循迹、5频段频谱律动与流光歌词）| Android TV & Car Vinyl Bluetooth Music Visualizer",
-      "homepage": "",
-      "has_pages": false,
+      "homepage": "https://arrow36.github.io/Bluetooth-Music-Canvas/",
+      "has_pages": true,
       "language": "Java",
       "topics": [
         "android-app",
@@ -78,9 +78,9 @@
         "vinyl"
       ],
       "created_at": "2026-10-31T13:31:45Z",
-      "category": "media",
-      "cat_badge": "Android TV",
-      "is_live": false
+      "category": "web",
+      "cat_badge": "Live Web",
+      "is_live": true
     },
     {
       "name": "tianyi-c10h-skyworth-SK-L1001-mod",
