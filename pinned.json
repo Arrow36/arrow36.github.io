@@ -1,6 +1,6 @@
 {
   "owner": "Arrow36",
-  "updatedAt": "2026-11-26T19:11:36Z",
+  "updatedAt": "2026-11-27T20:06:41Z",
   "pinned": [
     "Bluetooth-Music-Canvas",
     "neon-noise",
@@ -13,14 +13,28 @@
     {
       "name": "ToLivePhoto",
       "html_url": "https://github.com/Arrow36/ToLivePhoto",
-      "description": "",
+      "description": "Windows 原生视频转 iPhone 实况照片 (Live Photo) 工具 — 支持 U盘 DCIM 直导、RIFE GPU 光流补帧、比例裁切与拍立得套框、RAW/EXIF 自动匹配及多视频批量转换",
       "homepage": "",
       "has_pages": false,
       "language": "Python",
-      "topics": [],
+      "topics": [
+        "cr3",
+        "exif",
+        "ffmpeg",
+        "frame-interpolation",
+        "heic",
+        "iphone",
+        "live-photo",
+        "polaroid",
+        "pyside6",
+        "python",
+        "rife",
+        "video-to-livephoto",
+        "windows"
+      ],
       "created_at": "2026-11-26T15:48:38Z",
       "category": "media",
-      "cat_badge": "Media",
+      "cat_badge": "Desktop",
       "is_live": false
     },
     {
